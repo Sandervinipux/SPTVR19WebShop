@@ -144,6 +144,26 @@ public class Furniture implements Serializable{
                 + '}';
     }
 
+    public void setQuantity(String quantity) {
+        try {
+            int quantityInt = Integer.parseInt(quantity);
+            this.quantity = quantityInt;
+            System.out.println("Строка "+quantity+" успешно преобразована в число.");
+        } catch (Exception e) {
+            System.out.println("Введены не цифры. Поле не изменено");
+        }
+    }
+
+    public void setPrice(String price) {
+        try {
+            int priceInt = Integer.parseInt(price);
+            this.price = priceInt;
+            System.out.println("Строка "+price+" успешно преобразована в число.");
+        } catch (Exception e) {
+            System.out.println("Введены не цифры. Поле не изменено");
+        }
+    }
+
     
 
     

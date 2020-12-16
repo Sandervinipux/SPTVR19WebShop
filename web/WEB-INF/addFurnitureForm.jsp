@@ -17,7 +17,7 @@
             Размер: <input type="text" name="size" value="${size}"><br>
             Количество: <input type="text" name="quantity" value="${quantity}"><br>
             Цена: <input type="text" name="price" value="${price}"><br>
-            <input type="submit" name="submit" value="Add Furniture">
+            <input type="submit" name="submit" value="Добавить товар">
         </form>
     </body>
 </html>

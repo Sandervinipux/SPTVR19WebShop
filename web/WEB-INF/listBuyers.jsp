@@ -17,7 +17,7 @@
         <ol>
             <c:forEach var="buyer" items="${listBuyers}" varStatus="status">
                 <li>
-                    ${buyer.firstname}. ${buyer.lastname}. ${buyer.phone}. ${buyer.wallet}$
+                    <b>Имя:</b> ${buyer.firstname} | <b>Фамилия:</b> ${buyer.lastname} | <b>Телефон:</b> ${buyer.phone} | <b>Кошелёк:</b> ${buyer.wallet}$ | <a href="editBuyerForm?buyerId=${buyer.id}">Изменить</a>
                 </li>
             </c:forEach>
         </ol>
