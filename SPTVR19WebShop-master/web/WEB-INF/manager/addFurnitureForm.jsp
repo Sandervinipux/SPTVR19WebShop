@@ -31,7 +31,7 @@
                   </div>
                   <div class="form-floating">
                     <textarea class="form-control" placeholder="text" name="text" id="text"></textarea>
-                    <label for="text">Текст товара</label>
+                    <label for="text">Дополнение к товару</label>
                   </div><br>
                   <div class="mb-3 row">
                     <label for="price" class="col-sm-3 col-form-label">Цена:</label>

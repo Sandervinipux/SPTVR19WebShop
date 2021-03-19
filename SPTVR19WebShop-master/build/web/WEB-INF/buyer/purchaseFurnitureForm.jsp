@@ -44,7 +44,7 @@
                   <p class="card-text">Состав: ${furniture.color}</p>
                   <p class="card-text">Размер: ${furniture.size}</p>
                   <p class="card-text">Цена: ${furniture.price}$</p>
-                  <p class="card-text">Описание: ${furniture.text}</p>
+                  <p class="card-text">Дополнение: ${furniture.text}</p>
                 </div>
               </div>       
             </c:forEach>

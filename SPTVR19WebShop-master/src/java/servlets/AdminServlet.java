@@ -99,8 +99,9 @@ public class AdminServlet extends HttpServlet {
                 List<User> listUsers = userFacade.findAll();
                 Map<User,List<Role>> usersMap = new HashMap<>();
                 for(User u : listUsers){
-                    usersMap.put(u, userRolesFacade.getRolesForUser(u));
-                }
+                    if(u.getId() != 1){
+                        usersMap.put(u, userRolesFacade.getRolesForUser(u));
+                }}
                 request.setAttribute("usersMap", usersMap);
                 request.getRequestDispatcher(LoginServlet.pathToJsp.getString("adminPanel")).forward(request, response);
                 break;
@@ -119,16 +120,10 @@ public class AdminServlet extends HttpServlet {
                 User u = userFacade.find(Long.parseLong(userId));
                 if("0".equals(changeRole)){
                     userRolesFacade.setRoleToUser(r,u);
-                    request.setAttribute("info", "Роль изменена");
-                }else {
-                    request.setAttribute("userId", userId);
-                    request.setAttribute("roleId", roleId);
-                    request.setAttribute("info", "Изменить роль невозможно");
+                }else if("1".equals(changeRole)){
+                    userRolesFacade.removeRoleFromUser(r,u);
                 }
-//                }else if("1".equals(changeRole)){
-//                    userRolesFacade.removeRoleFromUser(r,u);
-                
-//                request.setAttribute("info", "Роль назначена");
+                request.setAttribute("info", "Роль назначена");
                 request.getRequestDispatcher("/adminPanel").forward(request, response);
                 break;
         }
